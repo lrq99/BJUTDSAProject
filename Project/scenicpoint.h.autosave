@@ -1,0 +1,14 @@
+#ifndef SCENICPOINT_H
+#define SCENICPOINT_H
+#include <QGraphicsItem>
+#include <QPainter>
+class ScenicPoint : public QGraphicsItem
+{
+    int x, y, w, h;
+public:
+    ScenicPoint(int x, int y, int w, int h);
+    QRectF boundingRect() const;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
+};
+
+#endif // SCENICPOINT_H
